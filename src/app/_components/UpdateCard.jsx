@@ -17,7 +17,7 @@ const UpdateCard = ({ note, setUpdateNote }) => {
         <div className="relative bg-white rounded-md shadow-sm">
           {/* Modal header */}
           <div className="flex items-center justify-between p-4 border-b">
-            <h3 className="text-lg font-semibold">Update Note</h3>
+            <h3 className="text-lg font-semibold text-black/80">Update Note</h3>
             <button
               onClick={() => setUpdateNote(false)}
               className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-500 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
