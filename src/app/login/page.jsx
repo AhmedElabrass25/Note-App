@@ -3,15 +3,13 @@ import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
-import { FaRegUser } from "react-icons/fa6";
-import { SlCalender } from "react-icons/sl";
-import { FaPhoneVolume } from "react-icons/fa";
 import { useFormik } from "formik";
 import axios from "axios";
 import toast from "react-hot-toast";
 import * as Yup from "yup"; // Import Yup
 import { redirect, useRouter } from "next/navigation";
 import { UserContext } from "../_context/UserContext";
+import Loading from "../loading";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -27,7 +25,7 @@ const Login = () => {
       .min(6, "Password must be at least 6 characters")
       .required("Password is required"),
   });
-
+  //  login Function
   async function loginFunc(values) {
     try {
       setLoading(true);
@@ -39,18 +37,18 @@ const Login = () => {
       localStorage.setItem("token", "3b8ny__" + res?.data?.token);
       toast.success("Registration successful", { position: "top-center" });
       router.push("/");
-      console.log(res);
+      // console.log(res);
     } catch (error) {
-      console.log(error);
-      setError(error?.response?.data?.msg || "Registration failed");
+      // console.log(error);
+      setError(error?.message || "Registration failed");
     } finally {
       setLoading(false);
     }
   }
-
+  //  Formik
   let formik = useFormik({
     initialValues: { email: "", password: "" },
-    validationSchema, // ✅ Add Yup validation schema
+    validationSchema, // Add Yup validation schema
     onSubmit: loginFunc,
   });
   useEffect(() => {

@@ -11,8 +11,15 @@ import { NoteContext } from "../_context/NoteContext";
 const Home = () => {
   let { loading, notes, getNotesFunc } = useContext(NoteContext);
   const [openModal, setOpenModal] = useState(false);
+  const router = useRouter();
   useEffect(() => {
-    getNotesFunc();
+    if (!localStorage.getItem("token")) {
+      router.push("/login");
+    } else {
+      if (notes.length > 0) {
+        getNotesFunc();
+      }
+    }
   }, []);
 
   return (

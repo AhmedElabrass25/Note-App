@@ -39,7 +39,7 @@ const Register = () => {
       .matches(/^(010|011|012|015)[0-9]{8}$/, "Invalid Egyptian phone number")
       .required("Phone is required"),
   });
-
+  //  Register Function
   async function registerFunc(values) {
     try {
       setLoading(true);
@@ -57,10 +57,10 @@ const Register = () => {
       setLoading(false);
     }
   }
-
+  //  Formik
   let formik = useFormik({
     initialValues: { name: "", email: "", password: "", age: "", phone: "" },
-    validationSchema, // ✅ Add Yup validation schema
+    validationSchema, // Add Yup validation schema
     onSubmit: registerFunc,
   });
   useEffect(() => {
@@ -78,7 +78,6 @@ const Register = () => {
           className="w-full mx-5 md:w-[400px] bg-white px-5 py-10 rounded-sm"
         >
           <h1 className="font-bold text-2xl mb-10 w-fit px-2">Registration</h1>
-
           {/* Name Input */}
           <div className="relative w-full mb-5">
             <div className="absolute left-0 top-2.5 flex items-center ps-3.5 pointer-events-none">
