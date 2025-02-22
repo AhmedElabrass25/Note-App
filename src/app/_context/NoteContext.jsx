@@ -2,7 +2,7 @@
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const { createContext, useState } = require("react");
+const { createContext, useState, useEffect } = require("react");
 
 export const NoteContext = createContext(0);
 function NoteContextProvider({ children }) {
@@ -102,6 +102,9 @@ function NoteContextProvider({ children }) {
       setUpdateNote(false);
     }
   }
+  useEffect(() => {
+    getNotesFunc();
+  }, []);
   return (
     <NoteContext.Provider
       value={{
