@@ -14,7 +14,7 @@ const UpdateCard = ({ note, setUpdateNote }) => {
   return (
     <div className="fixed top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center w-full bg-[rgba(0,0,0,0.6)]">
       <div className="relative p-4 w-full max-w-md max-h-full bg-[#f6f6f6] shadow-lg">
-        <div className="relative bg-white rounded-md shadow-sm dark:bg-gray-700">
+        <div className="relative bg-white rounded-md shadow-sm">
           {/* Modal header */}
           <div className="flex items-center justify-between p-4 border-b">
             <h3 className="text-lg font-semibold">Update Note</h3>
@@ -29,7 +29,7 @@ const UpdateCard = ({ note, setUpdateNote }) => {
           {/* Modal body */}
           <form className="p-4" onSubmit={handleUpdate}>
             <div className="mb-4">
-              <label className="block mb-2 text-[16px] font-medium text-gray-900 dark:text-white">
+              <label className="block mb-2 text-[16px] font-medium text-gray-900">
                 Title
               </label>
               <input
@@ -43,7 +43,7 @@ const UpdateCard = ({ note, setUpdateNote }) => {
             </div>
 
             <div className="mb-4">
-              <label className="block mb-2 text-[16px] font-medium text-gray-900 dark:text-white">
+              <label className="block mb-2 text-[16px] font-medium text-gray-900">
                 Content
               </label>
               <textarea

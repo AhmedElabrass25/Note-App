@@ -32,7 +32,7 @@ const NoteModal = ({ openModal, setOpenModal }) => {
           className="fixed top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center w-full bg-[rgba(0,0,0,0.6)]"
         >
           <div className="relative p-3 w-full max-w-md max-h-full bg-[#f6f6f6] shadow-lg">
-            <div className="relative bg-white rounded-md shadow-sm dark:bg-gray-700">
+            <div className="relative bg-white rounded-md shadow-sm">
               {/* Modal header */}
               <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900">
@@ -41,7 +41,7 @@ const NoteModal = ({ openModal, setOpenModal }) => {
                 <button
                   onClick={() => setOpenModal(false)}
                   type="button"
-                  className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
                   data-modal-toggle="crud-modal"
                 >
                   <svg
@@ -87,7 +87,7 @@ const NoteModal = ({ openModal, setOpenModal }) => {
                   <div className="col-span-2">
                     <label
                       htmlFor="description"
-                      className="block mb-2 text-[16px] font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-[16px] font-medium text-gray-900"
                     >
                       Note Content
                     </label>
