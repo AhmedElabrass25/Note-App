@@ -66,7 +66,9 @@ const Login = () => {
           onSubmit={formik.handleSubmit}
           className="w-full mx-5 md:w-[400px] bg-white px-5 py-10 rounded-sm"
         >
-          <h1 className="font-bold text-2xl mb-10 w-fit px-2">Login</h1>
+          <h1 className="font-bold text-2xl mb-10 w-fit px-2 text-black/80">
+            Login
+          </h1>
 
           {/* Email Input */}
           <div className="relative w-full mb-5">
@@ -131,7 +133,6 @@ const Login = () => {
                       fill="currentFill"
                     />
                   </svg>
-                  <span className="sr-only">Loading...</span>
                 </div>
               ) : (
                 "Login"
@@ -147,7 +148,7 @@ const Login = () => {
             )}
           </div>
 
-          <p className="w-full text-center text-[17px]">
+          <p className="w-full text-center text-[17px] text-black/80">
             Don`t have an account ?
             <Link className="text-[#4070f4]" href={"/register"}>
               {" "}

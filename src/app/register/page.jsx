@@ -77,7 +77,9 @@ const Register = () => {
           onSubmit={formik.handleSubmit}
           className="w-full mx-5 md:w-[400px] bg-white px-5 py-10 rounded-sm"
         >
-          <h1 className="font-bold text-2xl mb-10 w-fit px-2">Registration</h1>
+          <h1 className="font-bold text-2xl mb-10 w-fit px-2 text-black/80">
+            Registration
+          </h1>
           {/* Name Input */}
           <div className="relative w-full mb-5">
             <div className="absolute left-0 top-2.5 flex items-center ps-3.5 pointer-events-none">
@@ -209,7 +211,7 @@ const Register = () => {
             )}
           </div>
 
-          <p className="w-full text-center text-[17px]">
+          <p className="w-full text-center text-[17px] text-black/80">
             Already have an account ?{" "}
             <Link className="text-[#4070f4]" href="/login">
               Login Now

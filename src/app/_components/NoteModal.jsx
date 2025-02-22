@@ -34,8 +34,8 @@ const NoteModal = ({ openModal, setOpenModal }) => {
           <div className="relative p-3 w-full max-w-md max-h-full bg-[#f6f6f6] shadow-lg">
             <div className="relative bg-white rounded-md shadow-sm dark:bg-gray-700">
               {/* Modal header */}
-              <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900">
                   Create New Note
                 </h3>
                 <button
@@ -68,7 +68,7 @@ const NoteModal = ({ openModal, setOpenModal }) => {
                   <div className="col-span-2">
                     <label
                       htmlFor="name"
-                      className="block mb-2 text-[16px] font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-[16px] font-medium text-gray-900"
                     >
                       Name
                     </label>
